@@ -1,3 +1,4 @@
+import os
 from langchain_openai import AzureChatOpenAI
 from langgraph.graph import MessagesState
 from langgraph.graph import StateGraph, START, END
@@ -14,7 +15,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 # LLM with bound tool
-llm = AzureChatOpenAI()
+llm = AzureChatOpenAI(azure_deployment=os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"))
 llm_with_tools = llm.bind_tools([multiply])
 
 # Node

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Project_CC/openai_key_tester/**)",
+      "Bash(lc-academy-env/Scripts/python.exe -c \"import langgraph; print\\(langgraph.__version__\\)\")",
+      "Bash(c:Project_CClangchain-academy-learnlc-academy-envScriptspython.exe -c \"import nest_asyncio; print\\(''found''\\)\")",
+      "Bash(lc-academy-env/Scripts/python.exe -c \"import nest_asyncio; print\\(''found''\\)\")",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
